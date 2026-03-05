@@ -272,7 +272,7 @@
         "method": "POST",
         "ret": "txt",
         "paytoqs": "ignore",
-        "url": "https://buffet-monitor-default-rtdb.europe-west1.firebasedatabase.app/environment/logs.json",
+        "url": "https://YOUR-PROJECT-ID-default-rtdb.europe-west1.firebasedatabase.app/environment/logs.json",
         "tls": "",
         "persist": false,
         "proxy": "",
