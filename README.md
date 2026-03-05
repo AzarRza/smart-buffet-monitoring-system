@@ -227,7 +227,7 @@ Setup steps:
 
 - The model was trained on a small dataset of around 800 images, so it may struggle in environments with very different lighting or tray types
 - Tray detection depends on the tray having a clear rectangular shape in view
-- The Serial port is hardcoded to COM3 in Node-RED — this needs to be changed if your setup uses a different port
+- The Serial port is hardcoded to COM3 in Node-RED : this needs to be changed if your setup uses a different port
 - The architecture PDF is from an earlier version of the project and does not reflect the final system
 
 ---
