@@ -128,7 +128,7 @@ smart-buffet-monitoring-system/
 
 The model is a convolutional neural network trained with TensorFlow and Keras. It takes overhead images from the webcam and classifies them into one of four tray states: Full, Medium, Low, or Empty.
 
-Each frame goes through contrast enhancement, edge detection, and contour analysis to locate the tray before the image is passed to the model. If the confidence score is below 70%, the frame is skipped. A secondary OpenCV check runs when the model returns Empty — if objects are still visible inside the tray region, the result is changed to Low to avoid a false empty alert. The final state is only sent to Node-RED once 5 frames in a row agree on the same result.
+Each frame goes through contrast enhancement, edge detection, and contour analysis to locate the tray before the image is passed to the model. If the confidence score is below 70%, the frame is skipped. A secondary OpenCV check runs when the model returns Empty, if objects are still visible inside the tray region, the result is changed to Low to avoid a false empty alert. The final state is only sent to Node-RED once 5 frames in a row agree on the same result.
 
 The model was trained on around 800 images with an input size of 224x224 pixels.
 
