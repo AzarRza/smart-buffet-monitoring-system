@@ -245,6 +245,6 @@ Setup steps:
 
 ## Author
 
-Azar Rza
-KTH — Digitalisation in Sustainable Production Development
-March – June 2025
+Azar Rzayev
+KTH |  Digitalisation in Sustainable Production Development
+**Project timeline:** March – June 2025
