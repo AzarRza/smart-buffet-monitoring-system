@@ -59,7 +59,7 @@ Note: The PDF in `architecture/` reflects an earlier prototype design. The diagr
 | Component | Role |
 |-----------|------|
 | USB Webcam | Overhead image capture of buffet trays |
-| Raspberry Pi | Edge node — runs the Python detection script |
+| Raspberry Pi | Edge node : runs the Python detection script |
 | Arduino Uno | Reads the DHT20 sensor and sends data over Serial |
 | DHT20 Sensor (I2C) | Measures ambient temperature and humidity |
 | UPS | Keeps the system running without interruption |
