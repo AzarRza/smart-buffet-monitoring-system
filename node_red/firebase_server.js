@@ -1,13 +1,19 @@
+require('dotenv').config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const admin = require("firebase-admin");
 
-// Firebase service account
-const serviceAccount = require("./buffet-monitor-firebase-adminsdk-fbsvc-1215be6d78.json");
+// ---------------------------------------------------------------
+// SECURITY: credentials are loaded from environment variables,
+// NOT from a file. Never hardcode your service account key here.
+// To run locally: create a .env file (see .env.example for format)
+// ---------------------------------------------------------------
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://buffet-monitor-default-rtdb.europe-west1.firebasedatabase.app/"
+  databaseURL: process.env.FIREBASE_DATABASE_URL
 });
 
 const app = express();
@@ -36,7 +42,7 @@ app.post("/tray-update", (req, res) => {
   res.send("Tray data stored.");
 });
 
-// NEW: Temperature and Humidity route
+// Temperature and Humidity route
 app.post("/env-update", (req, res) => {
   const data = req.body;
   console.log("Env data received:", data);
